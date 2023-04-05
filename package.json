@@ -1,4 +1,22 @@
 {
+  "name": "testing-practice",
+  "version": "1.0.0",
+  "description": "A few practical tests for JavaScript functions using the Jest library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikennarichard/testing-practice.git"
+  },
+  "keywords": [],
+  "author": "Ikenna Richard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikennarichard/testing-practice/issues"
+  },
+  "homepage": "https://github.com/ikennarichard/testing-practice#readme",
   "devDependencies": {
     "jest": "^29.5.0"
   }
