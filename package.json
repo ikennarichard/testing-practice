@@ -4,7 +4,8 @@
   "description": "A few practical tests for JavaScript functions using the Jest library.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch": "jest --watch *.js"
   },
   "repository": {
     "type": "git",
