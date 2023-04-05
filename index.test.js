@@ -1,19 +1,21 @@
-const {stringLength, reverseString} = require('./index');
-const Calculator = require('./calculator')
+const {stringLength, reverseString, capitalize} = require('./index');
+const Calculator = require('./calculator');
 
-const operation = new Calculator(4, 20);
 
-test('return count if string length is between 1 nad 10 ', () => {
-  const str = 'Microverse';
-  const len = str.length;
-  expect(stringLength(str)).toBe(len);
-});
 
-test('return error if string length is not between 1 nad 10 ', () => {
-  const str = '';
-  const error = 'Error: str not between 1 and 10';
-  expect(stringLength(str)).toBe(error);
-});
+describe('string length function', () => {
+  test('return count if string length is between 1 nad 10 ', () => {
+    const str = 'Microverse';
+    const len = str.length;
+    expect(stringLength(str)).toBe(len);
+  });
+
+  test('return error if less than 1 or greater than 10', () => {
+    const test = '';
+    const err = 'Error: str not between 1 and 10'
+    expect(stringLength(test)).toBe(err);
+  });
+})
 
 describe('reverse string function', () => {
   const str = 'Apple';
@@ -28,8 +30,8 @@ describe('reverse string function', () => {
   });
 })
 
-
-describe('Calculator class', () => {
+describe('calculator class', () => {
+  const operation = new Calculator(4, 20);
 
   describe('divide method', () => {
     test('returns correct value', () => {
@@ -79,3 +81,15 @@ describe('Calculator class', () => {
 	});
 });
 
+describe('capitalize string fuunction', () => {
+  const str = 'apple'
+	test('should capitalize the first character of a string', () => {
+		expect(capitalize(str)).toBe('Apple');
+	});
+	test('return a string', () => {
+		expect(typeof capitalize(str) === 'string').toBeTruthy();
+	});
+	test('should capitalize the first character of a string', () => {
+		expect(capitalize(str)).not.toBe('APPle');
+	});
+});
