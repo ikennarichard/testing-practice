@@ -1,7 +1,15 @@
-export default class Calculator {
+class Calculator {
   constructor(a, b){
     this.first = a;
     this.second = b;
+  }
+
+  divide(){
+    return this.second / this.first
+  }
+
+  multiply() {
+    return this.first * this.second
   }
 
   add() {
@@ -11,12 +19,6 @@ export default class Calculator {
   subtract(){
     return this.second - this.first
   }
-
-  divide(){
-    return this.second/this.first
-  }
-
-  multiply() {
-    return this.first*this.second
-  }
 }
+
+module.exports = Calculator;
